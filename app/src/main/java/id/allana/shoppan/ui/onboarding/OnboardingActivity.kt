@@ -1,11 +1,13 @@
 package id.allana.shoppan.ui.onboarding
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
 import id.allana.shoppan.R
 import id.allana.shoppan.databinding.ActivityOnboardingBinding
+import id.allana.shoppan.ui.auth.AuthActivity
 
 class OnboardingActivity : AppCompatActivity() {
 
@@ -24,7 +26,19 @@ class OnboardingActivity : AppCompatActivity() {
         val onboardingFragmentAdapter = OnboardingViewPagerAdapter(supportFragmentManager, lifecycle)
         onboardingFragmentAdapter.addFragment(
             OnboardingHolderFragment(
-                "",
+                "Apa Itu Shoppan ?",
+                ""
+            )
+        )
+        onboardingFragmentAdapter.addFragment(
+            OnboardingHolderFragment(
+                "Keunggulan Shoppan",
+                ""
+            )
+        )
+        onboardingFragmentAdapter.addFragment(
+            OnboardingHolderFragment(
+                "Keunggulan Shoppan",
                 ""
             )
         )
@@ -45,10 +59,18 @@ class OnboardingActivity : AppCompatActivity() {
                             }
                         }
                         1 -> {
-                            TODO("LANJUTKAN")
+                            binding.apply {
+                                indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
+                                indicatorSecond.setCardBackgroundColor(ContextCompat.getColor(context, R.color.blue_primary))
+                                indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
+                            }
                         }
                         2 -> {
-                            TODO("LANJUTKAN")
+                            binding.apply {
+                                indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
+                                indicatorSecond.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
+                                indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.blue_primary))
+                            }
                         }
                     }
                 }
@@ -61,7 +83,8 @@ class OnboardingActivity : AppCompatActivity() {
                 val maxPages = binding.vpOnboarding.adapter?.itemCount ?: 0
 
                 if (nextIndex >= maxPages) {
-                    TODO("INTENT KE AUTH ACTIVITY")
+                    val navigate = Intent(this@OnboardingActivity, AuthActivity::class.java)
+                    startActivity(navigate)
                 } else {
                     binding.vpOnboarding.setCurrentItem(nextIndex, true)
                 }
