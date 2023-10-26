@@ -23,8 +23,7 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun initViewPager() {
-        val onboardingFragmentAdapter =
-            OnboardingViewPagerAdapter(supportFragmentManager, lifecycle)
+        val onboardingFragmentAdapter = OnboardingViewPagerAdapter(supportFragmentManager, lifecycle)
         onboardingFragmentAdapter.addFragment(
             OnboardingHolderFragment(
                 "Apa Itu Shoppan ?",
@@ -47,77 +46,30 @@ class OnboardingActivity : AppCompatActivity() {
 
         binding.vpOnboarding.apply {
             adapter = onboardingFragmentAdapter
-            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
 
                     when (position) {
                         0 -> {
                             binding.apply {
-                                indicatorFirst.setCardBackgroundColor(
-                                    ContextCompat.getColor(
-                                        context,
-                                        R.color.blue_primary
-                                    )
-                                )
-                                indicatorSecond.setCardBackgroundColor(
-                                    ContextCompat.getColor(
-                                        context,
-                                        R.color.white
-                                    )
-                                )
-                                indicatorThird.setCardBackgroundColor(
-                                    ContextCompat.getColor(
-                                        context,
-                                        R.color.white
-                                    )
-                                )
+                                indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.blue_primary))
+                                indicatorSecond.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
+                                indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
                             }
                         }
-
                         1 -> {
                             binding.apply {
-                                indicatorFirst.setCardBackgroundColor(
-                                    ContextCompat.getColor(
-                                        context,
-                                        R.color.white
-                                    )
-                                )
-                                indicatorSecond.setCardBackgroundColor(
-                                    ContextCompat.getColor(
-                                        context,
-                                        R.color.blue_primary
-                                    )
-                                )
-                                indicatorThird.setCardBackgroundColor(
-                                    ContextCompat.getColor(
-                                        context,
-                                        R.color.white
-                                    )
-                                )
+                                indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
+                                indicatorSecond.setCardBackgroundColor(ContextCompat.getColor(context, R.color.blue_primary))
+                                indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
                             }
                         }
-
                         2 -> {
                             binding.apply {
-                                indicatorFirst.setCardBackgroundColor(
-                                    ContextCompat.getColor(
-                                        context,
-                                        R.color.white
-                                    )
-                                )
-                                indicatorSecond.setCardBackgroundColor(
-                                    ContextCompat.getColor(
-                                        context,
-                                        R.color.white
-                                    )
-                                )
-                                indicatorThird.setCardBackgroundColor(
-                                    ContextCompat.getColor(
-                                        context,
-                                        R.color.blue_primary
-                                    )
-                                )
+                                indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
+                                indicatorSecond.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
+                                indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.blue_primary))
                             }
                         }
                     }
