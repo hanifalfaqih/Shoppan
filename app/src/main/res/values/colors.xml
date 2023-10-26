@@ -4,7 +4,7 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blue_primary">#2C6CFB</color>
     <color name="blue_secondary">#84A8F6</color>
-    <color name="abu">#909091</color>
+    <color name="grey">#909091</color>
 
 
 </resources>

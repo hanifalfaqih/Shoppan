@@ -11,10 +11,8 @@
         style="@style/TextHeader.22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_64sdp"
         android:layout_marginTop="@dimen/_72sdp"
-        android:layout_marginEnd="@dimen/_64sdp"
-        android:text="@string/sign_in_to_your_account"
+        android:text="@string/silahkan_masuk_ke_akun_anda"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -40,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_28sdp"
-                android:hint="@string/username" />
+                android:hint="@string/email" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et_password"
@@ -49,14 +47,15 @@
                 android:layout_marginStart="@dimen/_28sdp"
                 android:layout_marginEnd="@dimen/_28sdp"
                 android:layout_marginBottom="@dimen/_14sdp"
-                android:hint="@string/password" />
+                android:hint="@string/kata_sandi" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_sign_in"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_48sdp"
                 android:layout_margin="@dimen/_24sdp"
-                android:text="@string/sign_in" />
+                android:text="@string/masuk"
+                android:textSize="@dimen/_16ssp" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 

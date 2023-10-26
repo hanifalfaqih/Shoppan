@@ -6,14 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".ui.auth.register.RegisterFragment">
 
-
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_header_sign_up"
         style="@style/TextHeader.22"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_90sdp"
-        android:text="@string/create_your_account"
+        android:text="@string/buat_akun_anda"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -45,7 +44,7 @@
                 android:fontFamily="@font/nunito"
                 android:hint="@string/email"
                 android:singleLine="true"
-                android:textColorHint="@color/abu"
+                android:textColorHint="@color/grey"
                 android:textSize="@dimen/_13ssp" />
 
             <androidx.appcompat.widget.AppCompatEditText
@@ -56,22 +55,22 @@
                 android:layout_marginEnd="@dimen/_28sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
                 android:fontFamily="@font/nunito"
-                android:hint="@string/password"
+                android:hint="@string/kata_sandi"
                 android:singleLine="true"
-                android:textColorHint="@color/abu"
+                android:textColorHint="@color/grey"
                 android:textSize="@dimen/_13ssp" />
 
             <androidx.appcompat.widget.AppCompatEditText
-                android:id="@+id/et_username_signUp"
+                android:id="@+id/et_phoneNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="@dimen/_28sdp"
                 android:layout_marginEnd="@dimen/_28sdp"
                 android:layout_marginBottom="@dimen/_20sdp"
                 android:fontFamily="@font/nunito"
-                android:hint="@string/username"
+                android:hint="@string/no_telepon"
                 android:singleLine="true"
-                android:textColorHint="@color/abu"
+                android:textColorHint="@color/grey"
                 android:textSize="@dimen/_13ssp" />
 
             <com.google.android.material.button.MaterialButton
@@ -80,8 +79,7 @@
                 android:layout_height="@dimen/_48sdp"
                 android:layout_margin="@dimen/_24sdp"
                 android:fontFamily="@font/nunito"
-                android:singleLine="true"
-                android:text="@string/sign_up"
+                android:text="@string/daftar"
                 android:textSize="@dimen/_16ssp" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>

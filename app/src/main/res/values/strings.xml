@@ -11,4 +11,10 @@
     <string name="create_your_account">Create your account</string>
     <string name="email">Email</string>
     <string name="sign_up">Sign Up</string>
+    <string name="kata_sandi">Kata Sandi</string>
+    <string name="silahkan_masuk_ke_akun_anda">Silahkan masuk ke akun Anda</string>
+    <string name="buat_akun_anda">Buat akun Anda</string>
+    <string name="no_telepon">No. Telepon</string>
+    <string name="masuk">Masuk</string>
+    <string name="daftar">Daftar</string>
 </resources>
