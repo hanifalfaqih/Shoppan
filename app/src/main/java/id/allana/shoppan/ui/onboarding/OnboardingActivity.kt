@@ -24,11 +24,12 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun initViewPager() {
-        val onboardingFragmentAdapter = OnboardingViewPagerAdapter(supportFragmentManager, lifecycle)
+        val onboardingFragmentAdapter =
+            OnboardingViewPagerAdapter(supportFragmentManager, lifecycle)
         onboardingFragmentAdapter.addFragment(
             OnboardingHolderFragment(
                 "Selamat Datang Di Shoppan!",
-                "Shoppan adalah wadah bagi para pelajar yang ingin mengembangkan usaha nya"
+                "Shoppan adalah wadah bagi para pelajar untuk mengembangkan jiwa enterpreneur dan dapat membuka mata terkait perkembangan teknologi yang sudah ada"
             )
         )
         onboardingFragmentAdapter.addFragment(
@@ -46,7 +47,7 @@ class OnboardingActivity : AppCompatActivity() {
 
         binding.vpOnboarding.apply {
             adapter = onboardingFragmentAdapter
-            registerOnPageChangeCallback(object: ViewPager2.OnPageChangeCallback() {
+            registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
                 override fun onPageSelected(position: Int) {
                     super.onPageSelected(position)
 
@@ -58,6 +59,7 @@ class OnboardingActivity : AppCompatActivity() {
                                 indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
                             }
                         }
+
                         1 -> {
                             binding.apply {
                                 indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
@@ -65,6 +67,7 @@ class OnboardingActivity : AppCompatActivity() {
                                 indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
                             }
                         }
+
                         2 -> {
                             binding.apply {
                                 indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))

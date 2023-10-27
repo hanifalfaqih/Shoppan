@@ -9,14 +9,31 @@
         android:id="@+id/loginFragment"
         android:name="id.allana.shoppan.ui.auth.login.LoginFragment"
         android:label="fragment_login"
-        tools:layout="@layout/fragment_login" >
+        tools:layout="@layout/fragment_login">
         <action
             android:id="@+id/action_loginFragment_to_registerFragment"
             app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="id.allana.shoppan.ui.auth.register.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" />
+        tools:layout="@layout/fragment_register">
+        <action
+            android:id="@+id/action_registerFragment_to_dataDiriFragment"
+            app:destination="@id/dataDiriFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/dataDiriFragment"
+        android:name="id.allana.shoppan.ui.DataDiriFragment"
+        android:label="fragment_data_diri"
+        tools:layout="@layout/fragment_data_diri" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="id.allana.shoppan.ui.main.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
 </navigation>

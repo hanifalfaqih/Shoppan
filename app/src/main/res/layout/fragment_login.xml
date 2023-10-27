@@ -42,7 +42,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/_28sdp"
-                android:hint="@string/email" />
+                android:fontFamily="@font/nunito"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/_13ssp" />
 
             <androidx.appcompat.widget.AppCompatEditText
                 android:id="@+id/et_password"
@@ -51,7 +56,12 @@
                 android:layout_marginStart="@dimen/_28sdp"
                 android:layout_marginEnd="@dimen/_28sdp"
                 android:layout_marginBottom="@dimen/_14sdp"
-                android:hint="@string/password" />
+                android:fontFamily="@font/nunito"
+                android:hint="@string/password"
+                android:singleLine="true"
+                android:inputType="textVisiblePassword"
+                android:textColorHint="@color/grey"
+                android:textSize="@dimen/_13ssp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_sign_in"
@@ -70,7 +80,6 @@
         style="@style/TextFooter.15"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-
         android:text="@string/don_t_have_an_account_sign_up"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
