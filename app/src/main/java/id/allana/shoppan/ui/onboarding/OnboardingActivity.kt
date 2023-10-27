@@ -2,6 +2,7 @@ package id.allana.shoppan.ui.onboarding
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.viewpager2.widget.ViewPager2
@@ -39,7 +40,7 @@ class OnboardingActivity : AppCompatActivity() {
         onboardingFragmentAdapter.addFragment(
             OnboardingHolderFragment(
                 "Kemudahan Transaksi",
-                "Shoppan memberikan akses langsung ke Whatsapp saat ingin transaksi,sehingga transaksi jual beli lebih mudah dan fleksibel"
+                "Shoppan memberikan akses langsung ke Whatsapp saat ingin bertransaksi, sehingga transaksi jual beli lebih mudah dan fleksibel"
             )
         )
 
@@ -81,7 +82,8 @@ class OnboardingActivity : AppCompatActivity() {
                 val nextIndex = getNextIndex()
                 val maxPages = binding.vpOnboarding.adapter?.itemCount ?: 0
 
-                if (nextIndex >= maxPages) {
+                if (nextIndex == maxPages) {
+                    Log.d("INTENT", "CLICKED!")
                     val navigate = Intent(this@OnboardingActivity, AuthActivity::class.java)
                     startActivity(navigate)
                     finish()
@@ -93,9 +95,8 @@ class OnboardingActivity : AppCompatActivity() {
     }
 
     private fun getNextIndex(): Int {
-        val maxPages = binding.vpOnboarding.adapter?.itemCount ?: 0
         val currentPage = binding.vpOnboarding.currentItem
-        return currentPage.plus(1).coerceAtMost(maxPages - 1)
+        return currentPage.plus(1)
     }
 
     override fun onDestroy() {
