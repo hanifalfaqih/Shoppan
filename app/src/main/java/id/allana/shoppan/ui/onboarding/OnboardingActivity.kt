@@ -26,23 +26,22 @@ class OnboardingActivity : AppCompatActivity() {
         val onboardingFragmentAdapter = OnboardingViewPagerAdapter(supportFragmentManager, lifecycle)
         onboardingFragmentAdapter.addFragment(
             OnboardingHolderFragment(
-                "Apa Itu Shoppan ?",
-                ""
+                "Selamat Datang Di Shoppan!",
+                "Shoppan adalah wadah bagi para pelajar yang ingin mengembangkan usaha nya"
             )
         )
         onboardingFragmentAdapter.addFragment(
             OnboardingHolderFragment(
-                "Keunggulan Shoppan",
-                ""
+                "Produk Unggulan",
+                "Rekomendasi produk unggulan yang ditawarkan  dari para pelajar yang memiliki usaha dapat kamu temukan disini"
             )
         )
         onboardingFragmentAdapter.addFragment(
             OnboardingHolderFragment(
-                "Keunggulan Shoppan",
-                ""
+                "Kemudahan Transaksi",
+                "Shoppan memberikan akses langsung ke Whatsapp saat ingin transaksi,sehingga transaksi jual beli lebih mudah dan fleksibel"
             )
         )
-        // LANJUTKAN PEMBUATAN SISA 2 SCREEN ONBOARDING, PASTIKAN 2 PARAMETER TITLE DAN DESCRIPTION TERISI
 
         binding.vpOnboarding.apply {
             adapter = onboardingFragmentAdapter
