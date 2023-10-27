@@ -58,19 +58,22 @@
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/indicator_first"
                     android:layout_width="@dimen/_8sdp"
-                    android:layout_height="@dimen/_8sdp"/>
+                    android:layout_height="@dimen/_8sdp"
+                    app:strokeWidth="0dp"/>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/indicator_second"
                     android:layout_marginStart="@dimen/_4sdp"
                     android:layout_marginEnd="@dimen/_4sdp"
                     android:layout_width="@dimen/_8sdp"
-                    android:layout_height="@dimen/_8sdp"/>
+                    android:layout_height="@dimen/_8sdp"
+                    app:strokeWidth="0dp"/>
 
                 <com.google.android.material.card.MaterialCardView
                     android:id="@+id/indicator_third"
                     android:layout_width="@dimen/_8sdp"
-                    android:layout_height="@dimen/_8sdp"/>
+                    android:layout_height="@dimen/_8sdp"
+                    app:strokeWidth="0dp"/>
 
             </androidx.appcompat.widget.LinearLayoutCompat>
 

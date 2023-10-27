@@ -2,19 +2,13 @@
     <string name="app_name">Shoppan</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="sign_in_to_your_account">Sign In to your account</string>
+    <string name="sign_in_to_your_account">Silakan masuk ke akun Anda</string>
     <string name="username">Username</string>
-    <string name="password">Password</string>
-    <string name="forgot_password">Forgot password?</string>
-    <string name="sign_in">Sign In</string>
-    <string name="don_t_have_an_account_sign_up">Don\'t have an account? Sign Up</string>
-    <string name="create_your_account">Create your account</string>
+    <string name="password">Kata Sandi</string>
+    <string name="sign_in">Masuk</string>
+    <string name="don_t_have_an_account_sign_up">Belum punya akun? Daftar</string>
+    <string name="create_your_account">Buat akun Anda</string>
     <string name="email">Email</string>
-    <string name="sign_up">Sign Up</string>
-    <string name="kata_sandi">Kata Sandi</string>
-    <string name="silahkan_masuk_ke_akun_anda">Silahkan masuk ke akun Anda</string>
-    <string name="buat_akun_anda">Buat akun Anda</string>
-    <string name="no_telepon">No. Telepon</string>
-    <string name="masuk">Masuk</string>
-    <string name="daftar">Daftar</string>
+    <string name="sign_up">Daftar</string>
+    <string name="phone_number">No. Telepon</string>
 </resources>
