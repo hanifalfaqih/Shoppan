@@ -11,4 +11,10 @@
     <string name="email">Email</string>
     <string name="sign_up">Daftar</string>
     <string name="phone_number">No. Telepon</string>
+    <string name="data_diri">Data Diri</string>
+    <string name="nama">Nama</string>
+    <string name="sekolah">Sekolah</string>
+    <string name="alamat">Alamat</string>
+    <string name="simpan">Simpan</string>
+    <string name="tambahkan_foto_profil">Tambahkan Foto Profil</string>
 </resources>
