@@ -104,24 +104,23 @@
             android:textColor="@color/grey"
             android:textSize="@dimen/_14ssp" />
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="@dimen/_90sdp"
             android:layout_height="@dimen/_90sdp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginEnd="@dimen/_50sdp"
-            android:background="@drawable/card_stroke"
-            app:cardCornerRadius="@dimen/_6sdp"
-            app:cardElevation="@dimen/_1sdp">
+            app:strokeColor="@color/blue_primary"
+            app:cardCornerRadius="@dimen/_6sdp">
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/card_stroke"
-                android:src="@drawable/ic_addimage" />
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/ic_addimage"/>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_simpan"
