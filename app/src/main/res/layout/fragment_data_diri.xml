@@ -11,9 +11,9 @@
         style="@style/TextHeader.22"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_60sdp"
-        android:text="@string/data_diri"
+        android:text="@string/personal_data"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/container_dataDiri"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -22,11 +22,12 @@
         android:id="@+id/container_dataDiri"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_28sdp"
         android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_dataDiri">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25">
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/tl_nama"
@@ -36,7 +37,7 @@
             android:layout_marginStart="@dimen/_24sdp"
             android:layout_marginEnd="@dimen/_24sdp"
             android:layout_marginBottom="@dimen/_18sdp"
-            android:hint="@string/nama">
+            android:hint="@string/name">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -55,7 +56,7 @@
             android:layout_marginStart="@dimen/_24sdp"
             android:layout_marginEnd="@dimen/_24sdp"
             android:layout_marginBottom="@dimen/_18sdp"
-            android:hint="@string/sekolah">
+            android:hint="@string/school">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -72,7 +73,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/_24sdp"
             android:layout_marginEnd="@dimen/_24sdp"
-            android:hint="@string/alamat">
+            android:hint="@string/address">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -99,38 +100,37 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/nunito"
             android:gravity="center"
-            android:text="@string/tambahkan_foto_profil"
+            android:text="@string/add_photo_profile"
             android:textColor="@color/grey"
             android:textSize="@dimen/_14ssp" />
 
-        <androidx.cardview.widget.CardView
+        <com.google.android.material.card.MaterialCardView
             android:layout_width="@dimen/_90sdp"
             android:layout_height="@dimen/_90sdp"
             android:layout_gravity="center_horizontal"
             android:layout_marginStart="@dimen/_50sdp"
             android:layout_marginTop="@dimen/_15sdp"
             android:layout_marginEnd="@dimen/_50sdp"
-            android:background="@drawable/card_stroke"
-            app:cardCornerRadius="@dimen/_6sdp"
-            app:cardElevation="@dimen/_1sdp">
+            app:strokeColor="@color/blue_primary"
+            app:cardCornerRadius="@dimen/_6sdp">
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/card_stroke"
-                android:src="@drawable/ic_addimage" />
+                android:backgroundTint="@android:color/transparent"
+                android:src="@drawable/ic_add_image"/>
 
-        </androidx.cardview.widget.CardView>
+        </com.google.android.material.card.MaterialCardView>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_simpan"
             style="@style/TextButton.16"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/_52sdp"
+            android:layout_height="@dimen/_48sdp"
             android:layout_marginStart="@dimen/_24sdp"
             android:layout_marginTop="@dimen/_20sdp"
             android:layout_marginEnd="@dimen/_24sdp"
-            android:text="@string/simpan" />
+            android:text="@string/save" />
 
     </androidx.appcompat.widget.LinearLayoutCompat>
 

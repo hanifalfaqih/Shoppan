@@ -10,7 +10,7 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_title_onboarding"
-        style="@style/TextTitle.20"
+        style="@style/TextTitle.18"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
