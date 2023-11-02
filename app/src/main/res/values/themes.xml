@@ -16,7 +16,7 @@
         <item name="android:textSize">@dimen/_22ssp</item>
         <item name="android:textColor">@color/black</item>
     </style>
-    
+
     <style name="TextTitle.18" parent="Widget.MaterialComponents.TextView">
         <item name="fontFamily">@font/nunito</item>
         <item name="fontWeight">700</item>
@@ -37,8 +37,8 @@
     </style>
 
     <style name="TextTitleSemiBold.16" parent="Widget.MaterialComponents.TextView">
-        <item name="fontFamily">@font/nunito_semibold</item>
         <item name="android:textSize">@dimen/_16ssp</item>
+        <item name="fontFamily">@font/nunito_semibold</item>
         <item name="android:textColor">@color/black</item>
     </style>
 
@@ -60,6 +60,12 @@
         <item name="android:textSize">@dimen/_16ssp</item>
     </style>
 
+    <style name="TextButton.14" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/nunito_bold</item>
+        <item name="fontWeight">600</item>
+        <item name="android:textSize">@dimen/_14ssp</item>
+    </style>
+
     <style name="TextFooter.15" parent="Widget.MaterialComponents.TextView">
         <item name="fontFamily">@font/nunito</item>
         <item name="fontWeight">400</item>
@@ -74,6 +80,20 @@
         <item name="android:textColor">@color/black</item>
     </style>
 
+    <style name="TextFooter.12.Grey" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/nunito</item>
+        <item name="fontWeight">400</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/grey</item>
+    </style>
+
+    <style name="TextFooter.13" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/nunito</item>
+        <item name="fontWeight">400</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/blue3</item>
+    </style>
+
     <style name="TextDescription.14" parent="Widget.MaterialComponents.TextView">
         <item name="fontFamily">@font/nunito</item>
         <item name="fontWeight">600</item>
@@ -81,10 +101,18 @@
         <item name="android:textColor">@color/white</item>
     </style>
 
+    <style name="TextDescription.12" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">@font/nunito</item>
+        <item name="fontWeight">600</item>
+        <item name="android:textSize">@dimen/_12ssp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+
     <style name="CustomCardView" parent="Widget.MaterialComponents.CardView">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearanceCustomCorner</item>
     </style>
-    
+
     <style name="ShapeAppearanceCustomCorner" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSizeTopLeft">@dimen/_20sdp</item>
@@ -101,5 +129,5 @@
         <item name="cornerSizeBottomRight">@dimen/_50sdp</item>
     </style>
 
-    
+
 </resources>
