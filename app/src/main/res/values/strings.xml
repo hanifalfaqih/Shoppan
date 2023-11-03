@@ -17,4 +17,11 @@
     <string name="address">Alamat</string>
     <string name="save">Simpan</string>
     <string name="add_photo_profile">Tambahkan Foto Profil</string>
+    <string name="product_name">Nama Produk</string>
+    <string name="product_price">Harga Produk</string>
+    <string name="seller_name">Nama Penjual</string>
+    <string name="school_name">Asal Sekolah</string>
+    <string name="description">Deskripsi</string>
+    <string name="description_content">Isi deskripsi</string>
+    <string name="buy_now">Beli Sekarang</string>
 </resources>
