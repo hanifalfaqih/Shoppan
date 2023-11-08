@@ -54,7 +54,7 @@ class OnboardingActivity : AppCompatActivity() {
                     when (position) {
                         0 -> {
                             binding.apply {
-                                indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.blue_primary))
+                                indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.yellow_primary))
                                 indicatorSecond.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
                                 indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
                             }
@@ -63,7 +63,7 @@ class OnboardingActivity : AppCompatActivity() {
                         1 -> {
                             binding.apply {
                                 indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
-                                indicatorSecond.setCardBackgroundColor(ContextCompat.getColor(context, R.color.blue_primary))
+                                indicatorSecond.setCardBackgroundColor(ContextCompat.getColor(context, R.color.yellow_primary))
                                 indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
                             }
                         }
@@ -72,7 +72,7 @@ class OnboardingActivity : AppCompatActivity() {
                             binding.apply {
                                 indicatorFirst.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
                                 indicatorSecond.setCardBackgroundColor(ContextCompat.getColor(context, R.color.white))
-                                indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.blue_primary))
+                                indicatorThird.setCardBackgroundColor(ContextCompat.getColor(context, R.color.yellow_primary))
                             }
                         }
                     }

@@ -10,7 +10,7 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_title_onboarding"
-        style="@style/TextTitle.18"
+        style="@style/TextTitle.16.Nunito"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
@@ -18,11 +18,12 @@
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_description_onboarding"
-        style="@style/TextDescription.14"
+        style="@style/TextDescription.12"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/_36sdp"
         android:textAlignment="center"
+        android:textColor="@color/white"
         tools:text="@string/hello_blank_fragment" />
 
 

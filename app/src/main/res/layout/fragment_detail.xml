@@ -10,7 +10,7 @@
         android:id="@+id/toolbar_detail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/blue_primary"
+        android:background="@color/yellow_primary"
         android:paddingStart="@dimen/_10sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -127,6 +127,7 @@
             android:text="@string/description" />
 
         <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_isiDeskripsi"
             style="@style/TextDescription.12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -146,20 +147,22 @@
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_isiDeskripsi"
+        tools:ignore="NotSibling">
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="@dimen/_40sdp"
             android:layout_height="@dimen/_40sdp"
             android:layout_margin="@dimen/_4sdp"
-            android:backgroundTint="@color/blue_primary"
+            android:backgroundTint="@color/yellow_primary"
             app:strokeWidth="0dp">
 
             <androidx.appcompat.widget.AppCompatImageButton
                 android:layout_width="@dimen/_40sdp"
                 android:layout_height="@dimen/_40sdp"
                 android:layout_gravity="center"
-                android:backgroundTint="@color/blue_primary"
+                android:backgroundTint="@color/yellow_primary"
                 android:src="@drawable/ic_bookmark_outlined" />
 
         </com.google.android.material.card.MaterialCardView>

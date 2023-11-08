@@ -23,7 +23,7 @@
             android:layout_width="@dimen/_48sdp"
             android:layout_height="@dimen/_48sdp"
             android:layout_margin="@dimen/_4sdp"
-            android:backgroundTint="@color/blue_primary"
+            android:backgroundTint="@color/yellow_primary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:strokeWidth="0dp">
@@ -32,8 +32,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
-                android:src="@drawable/ic_bookmark_outlined"
-                android:backgroundTint="@color/blue_primary"/>
+                android:backgroundTint="@color/yellow_primary"
+                android:src="@drawable/ic_bookmark_outlined" />
 
         </com.google.android.material.card.MaterialCardView>
 
@@ -62,25 +62,25 @@
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
             android:layout_margin="@dimen/_8sdp"
-            app:layout_constraintTop_toBottomOf="@id/tv_price"
-            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent">
-            
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv_price">
+
             <com.google.android.material.imageview.ShapeableImageView
                 android:id="@+id/siv_seller_profile"
                 android:layout_width="@dimen/_22sdp"
                 android:layout_height="@dimen/_22sdp"
                 android:layout_gravity="center"
-                tools:src="@drawable/ic_launcher_background"/>
+                tools:src="@drawable/ic_food" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginStart="@dimen/_4sdp">
+                android:layout_marginStart="@dimen/_4sdp"
+                android:orientation="vertical">
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/tv_seller_name"
@@ -97,10 +97,10 @@
                     android:text="SMK N 8 Semarang" />
 
             </androidx.appcompat.widget.LinearLayoutCompat>
-            
+
         </androidx.appcompat.widget.LinearLayoutCompat>
-            
-        
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
-    
+
 </com.google.android.material.card.MaterialCardView>
