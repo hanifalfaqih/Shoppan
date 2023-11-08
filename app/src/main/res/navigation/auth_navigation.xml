@@ -28,9 +28,22 @@
     </fragment>
     <fragment
         android:id="@+id/dataDiriFragment"
-        android:name="id.allana.shoppan.ui.DataDiriFragment"
+        android:name="id.allana.shoppan.ui.auth.datadiri.DataDiriFragment"
         android:label="fragment_data_diri"
-        tools:layout="@layout/fragment_data_diri" />
+        tools:layout="@layout/fragment_data_diri" >
+        <argument
+            android:name="emailUser"
+            app:argType="string" />
+        <argument
+            android:name="passwordUser"
+            app:argType="string" />
+        <argument
+            android:name="phoneNumberUser"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_dataDiriFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/homeFragment"
         android:name="id.allana.shoppan.ui.main.home.HomeFragment"
