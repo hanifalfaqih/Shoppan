@@ -15,4 +15,9 @@
         android:name="id.allana.shoppan.ui.main.profile.ProfileFragment"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/saveFragment"
+        android:name="id.allana.shoppan.ui.main.Save.SaveFragment"
+        android:label="fragment_save"
+        tools:layout="@layout/fragment_save" />
 </navigation>
