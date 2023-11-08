@@ -1,6 +1,7 @@
 package id.allana.shoppan.ui.auth.login
 
 import android.content.Context
+import android.content.Intent
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.datastore.preferences.preferencesDataStore
@@ -14,6 +15,7 @@ import id.allana.shoppan.network.data.auth.LoginRequest
 import id.allana.shoppan.network.data.datastore.UserPreferences
 import id.allana.shoppan.network.datasource.auth.AuthDataSourceImpl
 import id.allana.shoppan.network.datasource.preference.PreferenceDataSourceImpl
+import id.allana.shoppan.ui.main.MainActivity
 import id.allana.shoppan.util.StringUtils
 
 
@@ -62,7 +64,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>(
         if (email.isEmpty()) {
             isFormValid = false
             getViewBinding().etEmail.error = "Email tidak boleh kosong"
-        } else if(!StringUtils.isEmailValid(email)) {
+        } else if (!StringUtils.isEmailValid(email)) {
             isFormValid = false
             getViewBinding().etEmail.error = "Email tidak valid"
         } else if (password.isEmpty()) {
@@ -81,9 +83,11 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>(
                     showLoading(true)
                     showError(false)
                 }
+
                 is Resource.Success -> {
                     navigateToHome()
                 }
+
                 is Resource.Error -> {
                     showLoading(false)
                     showError(true, response.message)
@@ -101,6 +105,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>(
     }
 
     override fun navigateToHome() {
-        findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+        val navigate = Intent(requireContext(), MainActivity::class.java)
+        startActivity(navigate)
     }
 }

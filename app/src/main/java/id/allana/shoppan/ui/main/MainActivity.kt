@@ -20,17 +20,17 @@ class MainActivity : AppCompatActivity() {
 
         binding.bottomNavMain.setOnItemSelectedListener {
             when (it.itemId) {
-                R.id.homeFragment -> {
+                R.id.nav_home -> {
                     it.title = getString(R.string.home)
                     replaceFragment(HomeFragment())
                 }
 
-                R.id.saveFragment -> {
+                R.id.nav_save -> {
                     it.title = getString(R.string.save)
                     replaceFragment(SaveFragment())
                 }
 
-                R.id.profileFragment -> {
+                R.id.nav_profile -> {
                     it.title = getString(R.string.account)
                     replaceFragment(ProfileFragment())
                 }
