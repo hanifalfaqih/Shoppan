@@ -22,6 +22,19 @@
     <string name="seller_name">Nama Penjual</string>
     <string name="school_name">Asal Sekolah</string>
     <string name="description">Deskripsi</string>
-    <string name="description_content">Isi deskripsi</string>
+    <string name="description_content">Baso Aci merupakan salah satu jajanan terkenal asal Jawa Barat yang memiliki cita rasa asin lada asem di campur jadi satu dengan berbagai macam tambahan toping. Baso Aci ini memiliki tekstur yang kenyal kerena terbuat dari tepung sagu dengan tambahan toping berupa cuangki, tahu dan sukro.</string>
     <string name="buy_now">Beli Sekarang</string>
+    <string name="start_selling">Mulai Jualan</string>
+    <string name="view_profile">Lihat Profil</string>
+    <string name="name_account">Name Account</string>
+    <string name="profile">Profil</string>
+    <string name="add_product">Tambah Produk</string>
+    <string name="category">Kategori</string>
+    <string name="product_description">Deskripsi Produk</string>
+    <string name="price">Harga</string>
+    <string name="upload">Unggah</string>
+    <string name="add_product_picture">Tambahkan Foto Produk</string>
+    <string name="home">Home</string>
+    <string name="save_icon">Save</string>
+    <string name="account">Account</string>
 </resources>
