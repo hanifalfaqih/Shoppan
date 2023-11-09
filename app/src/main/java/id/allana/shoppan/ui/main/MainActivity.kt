@@ -1,48 +1,49 @@
 package id.allana.shoppan.ui.main
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.NavController
+import androidx.navigation.fragment.NavHostFragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import id.allana.shoppan.R
 import id.allana.shoppan.databinding.ActivityMainBinding
-import id.allana.shoppan.ui.main.Save.SaveFragment
-import id.allana.shoppan.ui.main.home.HomeFragment
-import id.allana.shoppan.ui.main.profile.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.bottomNavMain.setOnItemSelectedListener {
+        val navHostFragment =
+            supportFragmentManager.findFragmentById(R.id.fragment_container_main) as NavHostFragment
+        navController = navHostFragment.navController
+
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_main)
+
+        bottomNav.setOnItemSelectedListener {
             when (it.itemId) {
                 R.id.nav_home -> {
                     it.title = getString(R.string.home)
-                    replaceFragment(HomeFragment())
+                    navController.navigate(R.id.homeFragment)
                 }
 
                 R.id.nav_save -> {
                     it.title = getString(R.string.save)
-                    replaceFragment(SaveFragment())
+                    navController.navigate(R.id.saveFragment)
                 }
 
                 R.id.nav_profile -> {
                     it.title = getString(R.string.account)
-                    replaceFragment(ProfileFragment())
+                    navController.navigate(R.id.profileFragment)
                 }
             }
             true
 
         }
+        bottomNav.selectedItemId = R.id.nav_home
     }
-
-    private fun replaceFragment(fragment: Fragment) =
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.fragment_container_main, fragment)
-            commit()
-        }
 }

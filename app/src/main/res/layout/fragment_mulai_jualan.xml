@@ -72,7 +72,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@android:color/transparent"
-                    android:singleLine="true" />
+                    android:fontFamily="@font/nunito"
+                    android:inputType="textCapWords"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:singleLine="true"
+                    tools:ignore="RtlSymmetry" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -109,7 +113,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@android:color/transparent"
-                    android:singleLine="true" />
+                    android:fontFamily="@font/nunito"
+                    android:inputType="textCapWords"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:singleLine="true"
+                    tools:ignore="RtlSymmetry" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -146,7 +154,12 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@android:color/transparent"
-                    android:singleLine="true" />
+                    android:fontFamily="@font/nunito"
+                    android:inputType="textMultiLine"
+                    android:paddingStart="@dimen/_10sdp"
+                    android:paddingEnd="@dimen/_10sdp"
+                    android:singleLine="true"
+                    tools:ignore="RtlSymmetry" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -182,8 +195,11 @@
                 <androidx.appcompat.widget.AppCompatEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:paddingStart="@dimen/_10sdp"
                     android:backgroundTint="@android:color/transparent"
-                    android:singleLine="true" />
+                    android:inputType="numberDecimal"
+                    android:singleLine="true"
+                    tools:ignore="RtlSymmetry" />
 
             </com.google.android.material.card.MaterialCardView>
 

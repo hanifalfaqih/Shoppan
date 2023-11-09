@@ -17,12 +17,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-
-        <com.google.android.material.imageview.ShapeableImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="@dimen/_160sdp"
             android:layout_height="@dimen/_160sdp"
             android:layout_gravity="center"
-            android:scaleType="fitXY"
             android:src="@drawable/ic_launcher_background" />
 
         <com.google.android.material.textview.MaterialTextView
@@ -37,7 +35,7 @@
             android:textSize="@dimen/_16ssp" />
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_lihatProfi"
+            android:id="@+id/btn_lihatProfil"
             style="@style/TextButton.14.noBold"
             android:layout_width="match_parent"
             android:layout_height="match_parent"

@@ -37,4 +37,6 @@
     <string name="home">Home</string>
     <string name="save_icon">Save</string>
     <string name="account">Account</string>
+    <string name="hide_bottom_view_on_scroll_behavior">com.google.android.material.bottomnavigation.BottomNavigationView$Behavior</string>
+
 </resources>
