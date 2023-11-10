@@ -18,7 +18,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            tools:src="@drawable/ic_launcher_background" />
+            android:src="@drawable/ic_launcher_background" />
 
         <com.google.android.material.card.MaterialCardView
             android:layout_width="@dimen/_32sdp"
@@ -75,7 +75,7 @@
                 android:layout_width="@dimen/_22sdp"
                 android:layout_height="@dimen/_22sdp"
                 android:layout_gravity="center"
-                tools:src="@drawable/ic_food" />
+                android:src="@drawable/ic_food" />
 
             <androidx.appcompat.widget.LinearLayoutCompat
                 android:layout_width="match_parent"

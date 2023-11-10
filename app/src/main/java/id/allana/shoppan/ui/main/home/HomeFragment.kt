@@ -4,7 +4,9 @@ import android.content.Context
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.datastore.preferences.preferencesDataStore
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.GridLayoutManager
+import id.allana.shoppan.R
 import id.allana.shoppan.base.BaseFragment
 import id.allana.shoppan.base.GenericViewModelFactory
 import id.allana.shoppan.base.Resource
@@ -24,6 +26,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>(
     private lateinit var homeAdapter: HomeAdapter
     override fun initView() {
         initList()
+
+        getViewBinding().btnToFoods.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_makananFragment)
+        }
     }
 
     override fun initViewModel(): HomeViewModel {

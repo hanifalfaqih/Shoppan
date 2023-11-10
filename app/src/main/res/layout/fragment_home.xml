@@ -108,6 +108,7 @@
                         android:weightSum="2">
 
                         <androidx.appcompat.widget.LinearLayoutCompat
+                            android:id="@+id/btn_to_foods"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_weight="1"
