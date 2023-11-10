@@ -27,6 +27,10 @@ class HomeAdapter: RecyclerView.Adapter<HomeAdapter.HomeProductViewHolder>() {
             binding.tvTitle.text = item.name
             binding.tvPrice.text = item.price.toString()
             binding.tvSellerName.text = item.seller
+
+            itemView.setOnClickListener {
+
+            }
         }
     }
 
