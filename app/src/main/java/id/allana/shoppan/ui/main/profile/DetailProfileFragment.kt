@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import id.allana.shoppan.R
 import id.allana.shoppan.databinding.FragmentDetailProfileBinding
@@ -25,8 +26,16 @@ class DetailProfileFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        navigateBack()
         hideBottomNavigation()
     }
+
+    private fun navigateBack() {
+        binding.toolbarDetailProfile.setOnClickListener {
+            findNavController().popBackStack()
+        }
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
