@@ -9,9 +9,10 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import id.allana.shoppan.R
 import id.allana.shoppan.databinding.FragmentDetailBinding
 import java.net.URLEncoder
-
 
 class DetailFragment : Fragment() {
 
@@ -37,6 +38,8 @@ class DetailFragment : Fragment() {
         val descriptionProduct = args.descriptionProduct
         setDataToDetail(nameProduct, priceProduct, sellerName, descriptionProduct)
 
+        hideBottomNavigation()
+
         binding.toolbarDetail.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
@@ -44,7 +47,7 @@ class DetailFragment : Fragment() {
         binding.btnBuyNow.setOnClickListener {
             val phoneNumber = 6282221365052
             val message = "Halo saya mau beli $nameProduct harga $priceProduct. Apakah stoknya tersedia?"
-            val url = "https://api.whatsapp.com/send?phone=$phoneNumber"+"&text=" + URLEncoder.encode(message, "UTF-8")
+            val url = "https://api.whatsapp.com/send?phone=$phoneNumber" + "&text=" + URLEncoder.encode(message, "UTF-8")
 
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
@@ -57,5 +60,16 @@ class DetailFragment : Fragment() {
         binding.tvProductPrice.text = priceProduct.toString()
         binding.tvNamaPenjual.text = sellerName
         binding.tvIsiDeskripsi.text = descriptionProduct
+    }
+
+    private fun hideBottomNavigation() {
+        val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.bottom_nav_main)
+        bottomNav?.visibility = View.GONE
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.bottom_nav_main)
+        bottomNav?.visibility = View.VISIBLE
     }
 }
