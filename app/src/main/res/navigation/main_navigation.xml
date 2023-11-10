@@ -51,5 +51,18 @@
         android:id="@+id/detailFragment"
         android:name="id.allana.shoppan.ui.DetailFragment"
         android:label="fragment_detail"
-        tools:layout="@layout/fragment_detail" />
+        tools:layout="@layout/fragment_detail" >
+        <argument
+            android:name="nameProduct"
+            app:argType="string" />
+        <argument
+            android:name="priceProduct"
+            app:argType="integer" />
+        <argument
+            android:name="sellerName"
+            app:argType="string" />
+        <argument
+            android:name="descriptionProduct"
+            app:argType="string" />
+    </fragment>
 </navigation>

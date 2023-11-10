@@ -2,6 +2,7 @@ package id.allana.shoppan.ui.main.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import id.allana.shoppan.databinding.ItemProductAndFoodBinding
 import id.allana.shoppan.network.response.DataItem
@@ -29,7 +30,13 @@ class HomeAdapter: RecyclerView.Adapter<HomeAdapter.HomeProductViewHolder>() {
             binding.tvSellerName.text = item.seller
 
             itemView.setOnClickListener {
-
+                val actionToDetail = HomeFragmentDirections.actionHomeFragmentToDetailFragment(
+                    nameProduct = item.name,
+                    priceProduct = item.price,
+                    sellerName = item.seller,
+                    descriptionProduct = item.description
+                )
+                it.findNavController().navigate(actionToDetail)
             }
         }
     }
