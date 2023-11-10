@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_homeFragment_to_detailFragment"
             app:destination="@id/detailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_makananFragment"
+            app:destination="@id/makananFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -65,4 +68,9 @@
             android:name="descriptionProduct"
             app:argType="string" />
     </fragment>
+    <fragment
+        android:id="@+id/makananFragment"
+        android:name="id.allana.shoppan.ui.MakananFragment"
+        android:label="fragment_makanan"
+        tools:layout="@layout/fragment_makanan" />
 </navigation>

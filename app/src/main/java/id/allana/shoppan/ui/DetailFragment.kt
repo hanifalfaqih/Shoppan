@@ -1,12 +1,16 @@
 package id.allana.shoppan.ui
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import id.allana.shoppan.databinding.FragmentDetailBinding
+import java.net.URLEncoder
 
 
 class DetailFragment : Fragment() {
@@ -32,6 +36,20 @@ class DetailFragment : Fragment() {
         val sellerName = args.sellerName
         val descriptionProduct = args.descriptionProduct
         setDataToDetail(nameProduct, priceProduct, sellerName, descriptionProduct)
+
+        binding.toolbarDetail.setNavigationOnClickListener {
+            findNavController().popBackStack()
+        }
+
+        binding.btnBuyNow.setOnClickListener {
+            val phoneNumber = 6282221365052
+            val message = "Halo saya mau beli $nameProduct harga $priceProduct. Apakah stoknya tersedia?"
+            val url = "https://api.whatsapp.com/send?phone=$phoneNumber"+"&text=" + URLEncoder.encode(message, "UTF-8")
+
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse(url)
+            startActivity(intent)
+        }
     }
 
     private fun setDataToDetail(nameProduct: String, priceProduct: Int, sellerName: String, descriptionProduct: String) {
