@@ -43,7 +43,7 @@ class DetailFragment : Fragment() {
 
         binding.btnBuyNow.setOnClickListener {
             val phoneNumber = 6282221365052
-            val message = "Halo saya mau beli $nameProduct harga $priceProduct. Apakah stoknya tersedia?"
+            val message = "Halo saya mau beli $nameProduct\nMetode pembayaran: COD / Transfer Bank  / e-Wallet / Bayar di rumah\nJumlah produk: "
             val url = "https://api.whatsapp.com/send?phone=$phoneNumber"+"&text=" + URLEncoder.encode(message, "UTF-8")
 
             val intent = Intent(Intent.ACTION_VIEW)
