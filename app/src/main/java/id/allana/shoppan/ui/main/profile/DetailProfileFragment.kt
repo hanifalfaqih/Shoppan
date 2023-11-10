@@ -36,7 +36,6 @@ class DetailProfileFragment : Fragment() {
         }
     }
 
-
     override fun onDestroyView() {
         super.onDestroyView()
 
