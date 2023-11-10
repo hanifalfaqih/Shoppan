@@ -2,6 +2,7 @@ package id.allana.shoppan.ui.auth.login
 
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.datastore.preferences.preferencesDataStore
@@ -85,6 +86,7 @@ class LoginFragment : BaseFragment<FragmentLoginBinding, LoginViewModel>(
                 }
 
                 is Resource.Success -> {
+                    response.data?.token?.let { Log.d(LoginFragment::class.java.simpleName, it) }
                     navigateToHome()
                 }
 

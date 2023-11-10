@@ -59,7 +59,7 @@
                 android:fontFamily="@font/nunito"
                 android:hint="@string/password"
                 android:singleLine="true"
-                android:inputType="textVisiblePassword"
+                android:inputType="textPassword"
                 android:textColorHint="@color/grey"
                 android:textSize="@dimen/_13ssp" />
 
