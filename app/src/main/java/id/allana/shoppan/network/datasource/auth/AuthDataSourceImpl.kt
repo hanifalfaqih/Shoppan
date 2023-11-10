@@ -13,11 +13,11 @@ import java.io.File
 
 class AuthDataSourceImpl: AuthDataSource {
     override suspend fun postLoginUser(loginRequestBody: LoginRequest): BaseResponse<UserTokenResponse> {
-        return ApiConfig.getApiService().postLoginUser(loginRequestBody)
+        return ApiConfig.getAuthApiService().postLoginUser(loginRequestBody)
     }
 
     override suspend fun postRegisterUser(registerRequestBody: RegisterRequest): BaseNullDataResponse {
-        return ApiConfig.getApiService().postRegisterUser(registerRequestBody)
+        return ApiConfig.getAuthApiService().postRegisterUser(registerRequestBody)
     }
 
     override suspend fun postUploadPhotoUser(image: File): BaseNullDataResponse {
@@ -27,6 +27,6 @@ class AuthDataSourceImpl: AuthDataSource {
             image.name,
             requestBody
         )
-        return ApiConfig.getApiService().postUploadPhotoUser(filePart)
+        return ApiConfig.getAuthApiService().postUploadPhotoUser(filePart)
     }
 }

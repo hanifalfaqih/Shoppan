@@ -61,7 +61,7 @@
                 android:layout_marginBottom="@dimen/_20sdp"
                 android:fontFamily="@font/nunito"
                 android:hint="@string/password"
-                android:inputType="textVisiblePassword"
+                android:inputType="textPassword"
                 android:singleLine="true"
                 android:textColorHint="@color/grey"
                 android:textSize="@dimen/_13ssp" />

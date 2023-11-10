@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_homeFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -31,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/saveFragment"
-        android:name="id.allana.shoppan.ui.main.Save.SaveFragment"
+        android:name="id.allana.shoppan.ui.main.save.SaveFragment"
         android:label="fragment_save"
         tools:layout="@layout/fragment_save" />
     <fragment
@@ -41,7 +44,12 @@
         tools:layout="@layout/fragment_detail_profile" />
     <fragment
         android:id="@+id/mulaiJualanFragment"
-        android:name="id.allana.shoppan.MulaiJualanFragment"
+        android:name="id.allana.shoppan.ui.sellproduct.MulaiJualanFragment"
         android:label="fragment_mulai_jualan"
         tools:layout="@layout/fragment_mulai_jualan" />
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="id.allana.shoppan.ui.DetailFragment"
+        android:label="fragment_detail"
+        tools:layout="@layout/fragment_detail" />
 </navigation>

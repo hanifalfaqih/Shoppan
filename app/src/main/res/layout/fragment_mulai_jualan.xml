@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MulaiJualanFragment">
+    tools:context=".ui.sellproduct.MulaiJualanFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -69,6 +69,7 @@
                 app:cardCornerRadius="@dimen/_26sdp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_name_product"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@android:color/transparent"
@@ -110,6 +111,7 @@
                 app:cardCornerRadius="@dimen/_26sdp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_category_product"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@android:color/transparent"
@@ -151,6 +153,7 @@
                 app:cardCornerRadius="@dimen/_26sdp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_description_product"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@android:color/transparent"
@@ -193,11 +196,12 @@
                 app:cardCornerRadius="@dimen/_26sdp">
 
                 <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/et_price_product"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingStart="@dimen/_10sdp"
                     android:backgroundTint="@android:color/transparent"
-                    android:inputType="numberDecimal"
+                    android:inputType="number"
                     android:singleLine="true"
                     tools:ignore="RtlSymmetry" />
 
@@ -234,6 +238,8 @@
                 android:layout_marginStart="@dimen/_50sdp"
                 android:layout_marginTop="@dimen/_15sdp"
                 android:layout_marginEnd="@dimen/_50sdp"
+                android:layout_marginBottom="@dimen/_24sdp"
+
                 android:backgroundTint="@color/white3"
                 app:cardCornerRadius="@dimen/_6sdp">
 
@@ -245,13 +251,20 @@
 
             </com.google.android.material.card.MaterialCardView>
 
+            <ProgressBar
+                android:id="@+id/pb_sell_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="invisible"/>
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_simpan"
                 style="@style/TextButton.16"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_48sdp"
+                android:layout_marginTop="@dimen/_24sdp"
                 android:layout_marginStart="@dimen/_24sdp"
-                android:layout_marginTop="@dimen/_20sdp"
                 android:layout_marginEnd="@dimen/_24sdp"
                 android:text="@string/upload" />
 

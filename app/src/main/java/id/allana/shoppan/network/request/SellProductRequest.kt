@@ -1,8 +1,8 @@
-package id.allana.shoppan.network.data.product
+package id.allana.shoppan.network.request
 
 import com.google.gson.annotations.SerializedName
 
-data class CreateProductResponse(
+data class SellProductRequest(
 
 	@field:SerializedName("price")
 	val price: Int,
