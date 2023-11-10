@@ -104,7 +104,7 @@
                 android:layout_marginTop="@dimen/_1sdp"
                 android:drawableStart="@drawable/ic_location"
                 android:drawablePadding="@dimen/_4sdp"
-                android:text="@string/school_name" />
+                android:text="SMKN 8 Semarang" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
