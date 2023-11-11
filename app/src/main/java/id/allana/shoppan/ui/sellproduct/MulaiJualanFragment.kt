@@ -1,10 +1,13 @@
 package id.allana.shoppan.ui.sellproduct
 
 import android.content.Context
+import android.view.View
 import android.widget.Toast
 import androidx.core.view.isVisible
 import androidx.datastore.preferences.preferencesDataStore
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import id.allana.shoppan.R
 import id.allana.shoppan.base.BaseFragment
 import id.allana.shoppan.base.GenericViewModelFactory
 import id.allana.shoppan.base.Resource
@@ -22,6 +25,9 @@ class MulaiJualanFragment : BaseFragment<FragmentMulaiJualanBinding, MulaiJualan
     private lateinit var authToken: String
 
     override fun initView() {
+        val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.bottom_nav_main)
+        bottomNav?.visibility = View.GONE
+
         getViewBinding().toolbarMulaiJualan.setNavigationOnClickListener {
             findNavController().popBackStack()
         }
@@ -112,5 +118,11 @@ class MulaiJualanFragment : BaseFragment<FragmentMulaiJualanBinding, MulaiJualan
 
     override fun showError(isError: Boolean, msg: String?) {
         if (isError) Toast.makeText(requireContext(), msg, Toast.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        val bottomNav = activity?.findViewById<BottomNavigationView>(R.id.bottom_nav_main)
+        bottomNav?.visibility = View.VISIBLE
     }
 }

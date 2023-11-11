@@ -6,6 +6,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -46,12 +47,16 @@ class DetailFragment : Fragment() {
 
         binding.btnBuyNow.setOnClickListener {
             val phoneNumber = 6282221365052
-            val message = "Halo saya mau beli $nameProduct\nMetode pembayaran: COD / Transfer Bank  / e-Wallet / Bayar di rumah\nJumlah produk: "
+            val message = "Halo saya mau beli $nameProduct\nMetode pembayaran: COD / Bayar di rumah\nJumlah produk: "
             val url = "https://api.whatsapp.com/send?phone=$phoneNumber"+"&text=" + URLEncoder.encode(message, "UTF-8")
 
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse(url)
             startActivity(intent)
+        }
+        
+        binding.btnSave.setOnClickListener {
+            Toast.makeText(context, "Simpan barang!", Toast.LENGTH_SHORT).show()
         }
     }
 
